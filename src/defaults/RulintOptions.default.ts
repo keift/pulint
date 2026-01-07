@@ -40,76 +40,82 @@ export const js_rules: { configs: ESLintConfig['rules']; custom: ESLintConfig['r
     'no-new-func': 'error',
     'no-new-wrappers': 'error',
     'no-object-constructor': 'error',
-    'no-restricted-imports': ['error', { patterns: ['node:*'] }],
+    'no-restricted-imports': [
+      'error',
+      {
+        patterns: ['node:*'],
+        paths: [{ name: 'fs', message: "Use 'fs/promises' instead. (rulint)" }]
+      }
+    ],
     'no-restricted-syntax': [
       'error',
       {
         selector: "CallExpression[callee.name='String']",
-        message: 'Use `.toString()` instead.'
+        message: "Use '.toString()' instead. (rulint)"
       },
       {
         selector: "CallExpression[callee.name='Boolean']",
-        message: 'Use `!!value` instead.'
+        message: "Use '!!value' instead. (rulint)"
       },
       {
         selector: "CallExpression[callee.name='isFinite']",
-        message: 'Use `Number.isFinite()` instead.'
+        message: "Use 'Number.isFinite()' instead. (rulint)"
       },
       {
         selector: "CallExpression[callee.name='isNaN']",
-        message: 'Use `Number.isNaN()` instead.'
+        message: "Use 'Number.isNaN()' instead. (rulint)"
       },
       {
         selector: "CallExpression[callee.name='parseInt']",
-        message: 'Use `Number.parseInt()` instead.'
+        message: "Use 'Number.parseInt()' instead. (rulint)"
       },
       {
         selector: "CallExpression[callee.name='parseFloat'], CallExpression[callee.object.name='Number'][callee.property.name='parseFloat']",
-        message: 'Use `Number()` instead.'
+        message: "Use 'Number()' instead. (rulint)"
       },
       {
         selector: "CallExpression[callee.property.name='forEach']",
-        message: 'Use `for...of` instead.'
+        message: "Use 'for...of' instead. (rulint)"
       },
       {
         selector: "CallExpression[callee.property.name='join'][callee.object.callee.property.name='split']",
-        message: 'Use `.replaceAll()` instead.'
+        message: "Use '.replaceAll()' instead. (rulint)"
       },
       {
         selector: "CallExpression[callee.property.name='then']",
-        message: 'Use await instead.'
+        message: "Use 'await' instead. (rulint)"
       },
       {
         selector: "CallExpression[callee.property.name='catch']",
-        message: 'Use try/catch instead.'
+        message: "Use 'try/catch' instead. (rulint)"
       },
       {
         selector: 'SwitchStatement',
-        message: 'Use if/else instead.'
+        message: "Use 'if/else' instead. (rulint)"
       },
       {
         selector: 'ForInStatement',
-        message: 'Use `for...of` instead.'
+        message: "Use 'for...of' instead. (rulint)"
       },
       {
         selector: 'EmptyStatement',
-        message: 'Empty statements are unnecessary.'
+        message: 'Empty statements are unnecessary. (rulint)'
       },
       {
         selector: 'DebuggerStatement',
-        message: 'Debugger statements cannot be included in the production.'
+        message: 'Debugger statements cannot be included in the production. (rulint)'
       },
       {
         selector: 'LabeledStatement',
-        message: 'Labeled statements reduce code readability.'
+        message: 'Labeled statements reduce code readability. (rulint)'
       },
       {
         selector: 'SequenceExpression',
-        message: 'Sequence expressions reduce code readability.'
+        message: 'Sequence expressions reduce code readability. (rulint)'
       },
       {
         selector: 'WithStatement',
-        message: 'With statements are not considered safe.'
+        message: 'With statements are not considered safe. (rulint)'
       }
     ],
     'no-useless-call': 'error',
