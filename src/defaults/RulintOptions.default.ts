@@ -50,52 +50,56 @@ export const js_rules: { configs: ESLintConfig['rules']; custom: ESLintConfig['r
     'no-restricted-syntax': [
       'error',
       {
-        selector: "CallExpression[callee.name='String']",
-        message: "Use '.toString()' instead. (rulint)"
-      },
-      {
         selector: "CallExpression[callee.name='Boolean']",
-        message: "Use '!!value' instead. (rulint)"
+        message: 'Use `!!value` instead. (rulint)'
       },
       {
         selector: "CallExpression[callee.name='isFinite']",
-        message: "Use 'Number.isFinite()' instead. (rulint)"
+        message: 'Use `Number.isFinite()` instead. (rulint)'
       },
       {
         selector: "CallExpression[callee.name='isNaN']",
-        message: "Use 'Number.isNaN()' instead. (rulint)"
+        message: 'Use `Number.isNaN()` instead. (rulint)'
       },
       {
         selector: "CallExpression[callee.name='parseInt']",
-        message: "Use 'Number.parseInt()' instead. (rulint)"
+        message: 'Use `Number.parseInt()` instead. (rulint)'
       },
       {
         selector: "CallExpression[callee.name='parseFloat'], CallExpression[callee.object.name='Number'][callee.property.name='parseFloat']",
-        message: "Use 'Number()' instead. (rulint)"
+        message: 'Use `Number()` instead. (rulint)'
+      },
+      {
+        selector: "CallExpression[callee.property.name='toString']",
+        message: 'Use `String()` instead. (rulint)'
       },
       {
         selector: "CallExpression[callee.property.name='forEach']",
-        message: "Use 'for...of' instead. (rulint)"
+        message: 'Use `for...of` instead. (rulint)'
       },
       {
         selector: "CallExpression[callee.property.name='join'][callee.object.callee.property.name='split']",
-        message: "Use '.replaceAll()' instead. (rulint)"
+        message: 'Use `.replaceAll()` instead. (rulint)'
       },
       {
         selector: "CallExpression[callee.property.name='then']",
-        message: "Use 'await' instead. (rulint)"
+        message: 'Use `await` instead. (rulint)'
       },
       {
         selector: "CallExpression[callee.property.name='catch']",
-        message: "Use 'try/catch' instead. (rulint)"
+        message: 'Use `try/catch` instead. (rulint)'
+      },
+      {
+        selector: "CallExpression[callee.property.name='finally']",
+        message: 'Use `try/finally` instead. (rulint)'
       },
       {
         selector: 'SwitchStatement',
-        message: "Use 'if/else' instead. (rulint)"
+        message: 'Use `if/else` instead. (rulint)'
       },
       {
         selector: 'ForInStatement',
-        message: "Use 'for...of' instead. (rulint)"
+        message: 'Use `for...of` instead. (rulint)'
       },
       {
         selector: 'EmptyStatement',
