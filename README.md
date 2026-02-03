@@ -12,6 +12,9 @@
 <!---->
 
 [RulintOptionsDefault]: ./src/defaults/RulintOptions.default.ts
+
+<!---->
+
 [ESLintConfig]: ./src/types/ESLintConfig.type.ts
 [RulintOptions]: ./src/types/RulintOptions.type.ts
 
