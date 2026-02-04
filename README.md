@@ -41,8 +41,8 @@
   - [Types](#types)
 - [Links](#links)
   - [Discord](https://discord.gg/keift)
-  - [Telegram](https://t.me/keiftt)
-  - [Twitter](https://x.com/keiftttt)
+  - [Telegram](https://t.me/keiftco)
+  - [Twitter](https://x.com/keiftco)
   - [GitHub](https://github.com/keift)
 - [License](#license)
 
@@ -189,8 +189,8 @@ Suggested uses are as follows. We recommend using [Prettier](https://npmjs.com/p
 ## Links
 
 - [Discord](https://discord.gg/keift)
-- [Telegram](https://t.me/keiftt)
-- [Twitter](https://x.com/keiftttt)
+- [Telegram](https://t.me/keiftco)
+- [Twitter](https://x.com/keiftco)
 - [GitHub](https://github.com/keift)
 
 ## License
